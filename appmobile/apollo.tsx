@@ -1,12 +1,22 @@
-import { ApolloClient, createHttpLink, InMemoryCache } from "@apollo/client";
-
-//const networkInterface = createNetworkInterface({ uri: 'http://YOURIPADDRESS:3000/graphql' });
-// const URI = 'http://192.168.43.35:19000:4000/graphql';
+import { ApolloClient, gql, InMemoryCache } from "@apollo/client";
 
 
+
+// const QUERY = gql`
+// query products {
+//   products {
+//     name
+//   }
+// }
+// `;
 
 
 export const client = new ApolloClient({
-    uri: 'http://192.168.43.35:4000/graphql',
-    cache: new InMemoryCache()
+  uri: "https://productscanapp.herokuapp.com/graphql",
+  cache: new InMemoryCache()
 });
+
+
+// client.query({ query: QUERY })
+//   .then(result => console.log(result.data))
+//   .catch(e => console.log(e))

@@ -1,9 +1,10 @@
-## ProductScan ##
+## ProductScan
 
 - A user can :
 - Scan a bar code
 - See the product scanned with the bar code
 - Search product in a list
+- See all products you scanned since the begining
 
 **project is not finished yet**
 

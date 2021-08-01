@@ -1,11 +1,8 @@
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as React from 'react';
 
 
-
-
 type ProductStateContextProps = {
-  products: any;
+  products: Product[];
   setProducts: (product: Product) => Product[];
 };
 
@@ -25,13 +22,10 @@ const ProductContext = React.createContext({} as ProductStateContextProps);
 const ProductProvider: React.FC = (props) => {
   const [products, setProducts] = React.useState<Product[]>([]);
 
-
-
   const value = React.useMemo(
     () => ({
       setProducts,
       products,
-
     }),
     [setProducts, products],
   );
@@ -40,7 +34,7 @@ const ProductProvider: React.FC = (props) => {
 function useProductList(): ProductStateContextProps {
   const context = React.useContext(ProductContext);
   if (context === undefined) {
-    throw new Error('useReminder must be used within a ReminderProvider');
+    throw new Error('useProductList must be used within a ProductListProvider');
   }
   return context;
 }

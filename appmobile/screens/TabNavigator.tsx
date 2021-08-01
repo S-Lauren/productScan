@@ -3,9 +3,10 @@ import React from "react";
 
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import ProductListScreen from "./ProductListScreen";
-import Home from "./Home";
+
 import ScannerScreen from "./ScannerScreen";
 import HistoricScreen from "./HistoricScreen";
+import HomeScreen from "./HomScreen";
 
 
 
@@ -26,7 +27,7 @@ function TabNavigator() {
         alignItems: "center"
       }
     }}>
-      <Tab.Screen name="Home" component={Home}
+      <Tab.Screen name="Home" component={HomeScreen}
         options={{
           tabBarBadgeStyle: { height: '50%' }
         }}

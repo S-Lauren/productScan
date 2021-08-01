@@ -50,7 +50,7 @@ export type HomeScreenProp = {
 }
 export type ProductDetailScreenProp = {
   navigation: ProductDetailScreenNavigationProp,
-  route: ProductDetailScreenRouteProp
+  route?: ProductDetailScreenRouteProp
 }
 export type ProductListScreenProp = {
   navigation: ProductListScreenNavigationProp,

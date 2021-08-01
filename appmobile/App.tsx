@@ -1,10 +1,11 @@
 
 import React from 'react';
 
-import MainNavigator from './components/Navigator';
+
 import { ProductProvider } from './context/Products.context';
 import { client } from './apollo';
 import { ApolloProvider } from '@apollo/client';
+import MainNavigator from './screens/Navigator/MainNavigator';
 
 
 export default function App() {

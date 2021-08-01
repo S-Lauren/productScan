@@ -2,9 +2,8 @@ import { BarCodeScanner } from 'expo-barcode-scanner';
 import * as React from 'react'
 import { StyleSheet, Text, Button } from 'react-native';
 import styled from 'styled-components/native';
-import { useProductList } from '../context/Products.context';
 
-import { ScannerScreenProp } from './Navigator';
+import { ScannerScreenProp } from './Navigator/MainNavigator';
 
 
 const ScannerScreen: React.FC<ScannerScreenProp> = ({ navigation }) => {
@@ -32,7 +31,6 @@ const ScannerScreen: React.FC<ScannerScreenProp> = ({ navigation }) => {
   }
 
 
-  // 
   return (
     <ContainerBarScan>
       <BarCodeScanner
@@ -49,10 +47,9 @@ const ScannerScreen: React.FC<ScannerScreenProp> = ({ navigation }) => {
 }
 
 const ContainerBarScan = styled.View`
-    flex: 1;
-    flex-direction: column;
-    justify-content: center;
-
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
 `
 const ButtonWrapper = styled.View`
   color: white; 
