@@ -6,8 +6,8 @@
 - Search product in a list
 - See all products you scanned since the begining
 
-**project is not finished yet**
+## Nice to Have 😎
 
-- Historic is missing (problem with async storage & graphql mutations)
-- Architecture is not good
-- Design is not good enough
+ - Filter by Date in Historic
+ - Delete product mutation
+ - Obviously the Sign up / Sign Authentication JWT 
