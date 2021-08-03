@@ -11,7 +11,7 @@ const HomeScreen: React.FC<HomeScreenProp> = ({ navigation }) => {
     <>
       <Container>
         <Image source={require("../assets/image.webp")} />
-        <Button title="Search Product" onPress={() => navigation.navigate("ProductListScreen")} />
+        <Title>Scan your product ! </Title>
       </Container>
     </>
   )
@@ -23,7 +23,11 @@ const Container = styled.View`
   background-color: #FF754D;
 `
 const Title = styled.Text`
-  font-size: 30px; 
+  position: absolute;
   font-weight: bold; 
+  font-size: 16px; 
+  padding-top: 20px; 
+  color: white;
 `
+
 export default HomeScreen;

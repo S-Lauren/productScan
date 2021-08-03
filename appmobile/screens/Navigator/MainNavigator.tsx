@@ -8,6 +8,7 @@ import ProductListScreen, { ProductListProps } from "../ProductListScreen";
 import TabNavigator from "../TabNavigator";
 import ProductDetailScreen from "../ProductDetailScreen";
 import ScannerScreen from "../ScannerScreen";
+import HistoricScreen from "../HistoricScreen";
 
 
 export type RootStackParamList = {
@@ -71,14 +72,15 @@ export default function MainNavigator() {
     <>
       <NavigationContainer>
         <Stack.Navigator>
-          <Stack.Screen name='Home' component={TabNavigator} />
+          <Stack.Screen name='TabNavigator' component={TabNavigator} options={{ title: "yuka" }} />
           <Stack.Screen
             name='ProductListScreen'
             component={ProductListScreen}
             options={{ title: 'Rechercher' }}
           />
-          <Stack.Screen name='ProductDetailScreen' component={ProductDetailScreen} />
+          <Stack.Screen name='ProductDetailScreen' component={ProductDetailScreen} options={{ headerShown: true, title: "details product" }} />
           <Stack.Screen name='ScannerScreen' component={ScannerScreen} />
+          <Stack.Screen name='HistoricScreen' component={HistoricScreen} options={{ headerShown: true, title: "All product scanned" }} />
         </Stack.Navigator>
       </NavigationContainer>
     </>
